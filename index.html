@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hiba Tadlaoui — Visual Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Major+Mono+Display&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="hero">
+    <!-- Header -->
+    <header class="site-header">
+      <nav class="nav nav--left">
+        <a href="#projects" class="nav__link nav__link--spaced">Projects</a>
+      </nav>
+
+      <a href="/" class="logo" aria-label="Hiba Tadlaoui — home">
+        <img src="assets/logo.png" alt="HT monogram" />
+      </a>
+
+      <nav class="nav nav--right">
+        <a href="#about" class="nav__link nav__link--spaced">About</a>
+        <a href="#resume" class="nav__link">Resume</a>
+      </nav>
+    </header>
+
+    <!-- Title -->
+    <h1 class="title">
+      <span class="sr-only">Visual Designer</span>
+
+      <!-- VISUAL: slides in from the right -->
+      <svg class="title__visual" viewBox="0 0 760 128" aria-hidden="true">
+        <defs>
+          <!-- Outline of the "U" (a shield shape) -->
+          <clipPath id="u-shape">
+            <path d="M0 0 H90 V82 C90 106 70 120 45 120 C20 120 0 106 0 82 Z" />
+          </clipPath>
+          <!-- Red iris: the pupil can only be seen inside this circle -->
+          <clipPath id="iris-clip">
+            <circle cx="46" cy="95" r="26" />
+          </clipPath>
+        </defs>
+
+        <!-- V : red outlined inverted triangle -->
+        <polygon points="12,8 107,8 59.5,117" fill="none" stroke="#AC0000" stroke-width="4.5" stroke-linejoin="miter" />
+
+        <!-- I : slab-serif block -->
+        <g fill="#222222">
+          <rect x="150" y="8" width="73" height="27" />
+          <rect x="184" y="35" width="5" height="55" />
+          <rect x="150" y="90" width="73" height="30" />
+        </g>
+
+        <!-- S -->
+        <text class="title__s" x="265" y="120" textLength="100" lengthAdjust="spacingAndGlyphs">S</text>
+
+        <!-- U : the eye -->
+        <g class="eye" transform="translate(399 6)">
+          <g clip-path="url(#u-shape)">
+            <rect width="90" height="120" fill="#AC0000" />
+            <!-- white of the eye -->
+            <circle cx="45.5" cy="102" r="40.5" fill="#F0EEE9" />
+            <!-- iris -->
+            <circle cx="46" cy="95" r="26" fill="#AC0000" />
+            <!-- pupil (animated) -->
+            <g clip-path="url(#iris-clip)">
+              <circle class="eye__pupil" cx="46" cy="95" r="13.5" fill="#F0EEE9" />
+            </g>
+          </g>
+        </g>
+
+        <!-- A : outlined triangle -->
+        <polygon points="572.5,10 625,118 520,118" fill="none" stroke="#222222" stroke-width="4.5" stroke-linejoin="miter" />
+
+        <!-- L -->
+        <g fill="#222222">
+          <rect x="665" y="5" width="5" height="115" />
+          <rect x="665" y="91" width="87" height="29" />
+        </g>
+      </svg>
+
+      <!-- DESIGNER: slides in from the left -->
+      <span class="title__designer">DESIGNER</span>
+    </h1>
+
+    <!-- Tagline + name -->
+    <p class="tagline">
+      Thoughtful design shapes more than<br />
+      what we see; it shapes the emotions<br />
+      and atmosphere of our environment.
+    </p>
+
+    <p class="name">HIBA TADLAOUI</p>
+
+    <!-- Welcome dome -->
+    <div class="welcome">
+      <span>WELCOME TO MY SPACE</span>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
